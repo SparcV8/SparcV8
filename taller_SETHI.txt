@@ -1,0 +1,121 @@
+
+
+
+# Escribir -19200
+#
+# Primero escribo el # en binario:
+# 00000000000000000100101100000000
+# Si el # es negativo lo invierto:
+# 11111111111111111011010011111111
+# y finalmente aplico complemento a 2:
+# 11111111111111111011010100000000
+# Obtengo el imm22:
+# 1111111111111111101101 (4194285)
+# los bits restantes:
+# 0100000000 (256)
+# De los bits + significativos de sim22 obtengo el valor con el que invÃ³co a SETHI:
+# 101101 (-45)
+
+SETHI -45, %l0;
+OR %l0, 256, %l1;
+OR %g0, 0, %o0;
+
+00 10000 100 1111111111111111110000
+10 10001 000010 10000 1 0000100000000
+10 00000 000010 00000 1 0000000000000
+
+0x213FFFF0
+0xA2142100
+0x80102000
+
+
+
+# Escribir -15800
+#
+# Primero escribo el # en binario:
+# 00000000000000000011110110111000
+# Si el # es negativo lo invierto:
+# 11111111111111111100001001000111
+# y finalmente aplico complemento a 2:
+# 11111111111111111100001001001000
+# Obtengo el imm22:
+# 1111111111111111110000 (4194288)
+# los bits restantes:
+# 1001001000 (584)
+# De los bits + significativos de sim22 obtengo el valor con el que invóco a SETHI:
+# 10000 (-16)
+
+SETHI -16, %l0;
+OR %l0, 584, %l1;
+OR %g0, 0, %o0;
+
+00 10000 100 1111111111111111110000
+10 10001 000010 10000 1 0001001001000
+10 00000 000010 00000 1 0000000000000
+
+0x213FFFF0
+0xA2142248
+0x80102000
+
+
+
+# Escribir -16300
+#
+# Primero escribo el # en binario:
+# 00000000000000000011111110101100
+# Si el # es negativo lo invierto:
+# 11111111111111111100000001010011
+# y finalmente aplico complemento a 2:
+# 11111111111111111100000001010100
+# Obtengo el imm22:
+# 1111111111111111110000 (4194288)
+# los bits restantes:
+# 0001010100 (84)
+# De los bits + significativos de sim22 obtengo el valor con el que invóco a SETHI:
+# 10000 (-16)
+
+SETHI -16, %l0;
+OR %l0, 84, %l1;
+OR %g0, 0, %o0;
+
+00 10000 100 1111111111111111110000
+10 10001 000010 10000 1 0000001010100
+10 00000 000010 00000 1 0000000000000
+
+0x213FFFF0
+0xA2142054
+0x80102000
+
+
+
+# Escribir 18600
+#
+# Primero escribo el # en binario:
+# 00000000000000000100100010101000
+# Obtengo el imm22:
+# 0000000000000000010010 (18)
+# los bits restantes:
+# 0010101000 (168)
+# De los bits + significativos de sim22 obtengo el valor con el que invÃ³co a SETHI:
+# 10010 (18)
+
+SETHI 18, %l0;
+OR %l0, 168, %l1;
+OR %g0, 0, %o0;
+
+00 10000 100 1111111111111111110000
+10 10001 000010 10000 1 0000010101000
+10 00000 000010 00000 1 0000000000000
+
+0x213FFFF0
+0xA21420A8
+0x80102000
+
+
+
+
+
+
+
+
+
